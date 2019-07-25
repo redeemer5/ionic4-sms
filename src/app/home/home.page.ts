@@ -10,9 +10,12 @@ export class HomePage {
 
   constructor(private sms: SMS) {}
 
+  message:string;
+  number:any;
+
   send()
   {
-    this.sms.send('0722117270', 'Hello world!');
+    this.sms.send(this.number, this.message);
   }
 
 }
